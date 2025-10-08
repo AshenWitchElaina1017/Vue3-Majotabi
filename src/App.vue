@@ -133,10 +133,10 @@
           <div class="text-center">
             <p class="text-gray-600 dark:text-gray-400 text-sm">
               © 2025 Vue3 + Go by
-              <span class="font-semibold text-purple-600 dark:text-purple-400">E.M</span>
+              <span class="font-semibold text-purple-600 dark:text-purple-400">AshenWitchElaina1017</span>
             </p>
             <p class="text-xs text-gray-500 dark:text-gray-500 mt-2">
-              Built with ❤️ and 魔女的魔法
+              Built with ❤️ and 魔女の旅々
             </p>
           </div>
         </div>
