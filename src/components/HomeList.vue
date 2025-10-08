@@ -1,9 +1,17 @@
 <template>
-  <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-    <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8">{{ titleName }}</h1>
+  <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- 优化后的标题区域 -->
+    <div class="flex items-center gap-4 mb-6 sm:mb-8">
+      <div class="h-10 w-2 bg-gradient-to-b from-purple-600 to-pink-600 rounded-full"></div>
+      <h2 class="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+        {{ titleName }}
+      </h2>
+      <div class="h-px flex-1 bg-gradient-to-r from-purple-200/50 to-transparent ml-4"></div>
+    </div>
+
     <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
       <article
-        v-for="value in displayData.splice(0,4)"
+        v-for="value in displayData.slice(0,4)"
         :key="value.id"
         class="group bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 ease-out overflow-hidden border border-gray-200 dark:border-gray-700 hover:-translate-y-2 cursor-pointer hover:border-indigo-300 dark:hover:border-indigo-600"
         role="article"
@@ -94,12 +102,14 @@ interface Props {
   loading?: boolean;
   titleName?: string;
   limit?: number; // 限制显示数量,默认为 0 表示显示全部
+  type?: 'anime' | 'novel'; // 内容类型,用于确定跳转路径
 }
 
 const props = withDefaults(defineProps<Props>(), {
   loading: false,
   titleName: '',
-  limit: 0
+  limit: 0,
+  type: 'anime'
 });
 
 // 计算显示的数据
@@ -115,8 +125,8 @@ const router = useRouter();
  */
 // [修改点 3] 定义一个方法来处理页面跳转逻辑
 const goToDetailPage = (id: number) => {
-  // 使用 router.push() 方法进行编程式导航
-  router.push(`/anime/${id}`);
+  // 根据 type 动态生成跳转路径
+  router.push(`/${props.type}/${id}`);
 };
 
 </script>

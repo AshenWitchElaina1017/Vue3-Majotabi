@@ -18,35 +18,35 @@
             <div class="hidden md:flex items-center space-x-1">
               <router-link
                 to="/"
-                class="nav-link"
+                class="px-4 py-2 rounded-lg text-gray-700 font-medium border border-transparent transition-all duration-200 hover:text-purple-600 hover:bg-purple-50 hover:border-purple-200 hover:translate-x-0.5 [&.active]:text-purple-600 [&.active]:bg-purple-200 [&.active]:border-purple-300 [&.active]:shadow-sm"
                 exact-active-class="active"
               >
                 首页
               </router-link>
               <router-link
                 to="/anime"
-                class="nav-link"
+                class="px-4 py-2 rounded-lg text-gray-700 font-medium border border-transparent transition-all duration-200 hover:text-purple-600 hover:bg-purple-50 hover:border-purple-200 hover:translate-x-0.5 [&.active]:text-purple-600 [&.active]:bg-purple-200 [&.active]:border-purple-300 [&.active]:shadow-sm"
                 active-class="active"
               >
                 动漫
               </router-link>
               <router-link
                 to="/novel"
-                class="nav-link"
+                class="px-4 py-2 rounded-lg text-gray-700 font-medium border border-transparent transition-all duration-200 hover:text-purple-600 hover:bg-purple-50 hover:border-purple-200 hover:translate-x-0.5 [&.active]:text-purple-600 [&.active]:bg-purple-200 [&.active]:border-purple-300 [&.active]:shadow-sm"
                 active-class="active"
               >
                 轻小说
               </router-link>
               <router-link
                 to="/elaina"
-                class="nav-link"
+                class="px-4 py-2 rounded-lg text-gray-700 font-medium border border-transparent transition-all duration-200 hover:text-purple-600 hover:bg-purple-50 hover:border-purple-200 hover:translate-x-0.5 [&.active]:text-purple-600 [&.active]:bg-purple-200 [&.active]:border-purple-300 [&.active]:shadow-sm"
                 active-class="active"
               >
                 伊蕾娜
               </router-link>
               <router-link
                 to="/about"
-                class="nav-link"
+                class="px-4 py-2 rounded-lg text-gray-700 font-medium border border-transparent transition-all duration-200 hover:text-purple-600 hover:bg-purple-50 hover:border-purple-200 hover:translate-x-0.5 [&.active]:text-purple-600 [&.active]:bg-purple-200 [&.active]:border-purple-300 [&.active]:shadow-sm"
                 active-class="active"
               >
                 关于
@@ -71,7 +71,7 @@
             <div class="flex flex-col space-y-2">
               <router-link
                 to="/"
-                class="mobile-nav-link"
+                class="block px-4 py-3 rounded-lg text-gray-700 font-medium border border-transparent transition-all duration-200 hover:text-purple-600 hover:bg-purple-50 hover:border-purple-200 hover:translate-x-0.5 [&.active]:text-purple-600 [&.active]:bg-purple-200 [&.active]:border-purple-300 [&.active]:shadow-sm"
                 exact-active-class="active"
                 @click="closeMobileMenu"
               >
@@ -79,7 +79,7 @@
               </router-link>
               <router-link
                 to="/anime"
-                class="mobile-nav-link"
+                class="block px-4 py-3 rounded-lg text-gray-700 font-medium border border-transparent transition-all duration-200 hover:text-purple-600 hover:bg-purple-50 hover:border-purple-200 hover:translate-x-0.5 [&.active]:text-purple-600 [&.active]:bg-purple-200 [&.active]:border-purple-300 [&.active]:shadow-sm"
                 active-class="active"
                 @click="closeMobileMenu"
               >
@@ -87,7 +87,7 @@
               </router-link>
               <router-link
                 to="/novel"
-                class="mobile-nav-link"
+                class="block px-4 py-3 rounded-lg text-gray-700 font-medium border border-transparent transition-all duration-200 hover:text-purple-600 hover:bg-purple-50 hover:border-purple-200 hover:translate-x-0.5 [&.active]:text-purple-600 [&.active]:bg-purple-200 [&.active]:border-purple-300 [&.active]:shadow-sm"
                 active-class="active"
                 @click="closeMobileMenu"
               >
@@ -95,7 +95,7 @@
               </router-link>
               <router-link
                 to="/elaina"
-                class="mobile-nav-link"
+                class="block px-4 py-3 rounded-lg text-gray-700 font-medium border border-transparent transition-all duration-200 hover:text-purple-600 hover:bg-purple-50 hover:border-purple-200 hover:translate-x-0.5 [&.active]:text-purple-600 [&.active]:bg-purple-200 [&.active]:border-purple-300 [&.active]:shadow-sm"
                 active-class="active"
                 @click="closeMobileMenu"
               >
@@ -103,7 +103,7 @@
               </router-link>
               <router-link
                 to="/about"
-                class="mobile-nav-link"
+                class="block px-4 py-3 rounded-lg text-gray-700 font-medium border border-transparent transition-all duration-200 hover:text-purple-600 hover:bg-purple-50 hover:border-purple-200 hover:translate-x-0.5 [&.active]:text-purple-600 [&.active]:bg-purple-200 [&.active]:border-purple-300 [&.active]:shadow-sm"
                 active-class="active"
                 @click="closeMobileMenu"
               >
@@ -157,130 +157,3 @@ const closeMobileMenu = () => {
   showMobileMenu.value = false
 }
 </script>
-
-<style scoped>
-/* 导航链接样式 */
-.nav-link {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  color: rgb(55 65 81);
-  font-weight: 500;
-  border: 1px solid transparent;
-  transition: all 0.2s;
-}
-
-.nav-link:hover {
-  color: rgb(147 51 234);
-  background-color: rgb(250 245 255);
-  border-color: rgb(233 213 255);
-  transform: translateX(2px);
-}
-
-.nav-link.active {
-  color: rgb(147 51 234);
-  background-color: rgb(233 213 255);
-  border-color: rgb(196 181 253);
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-}
-
-/* 移动端导航链接样式 */
-.mobile-nav-link {
-  display: block;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  color: rgb(55 65 81);
-  font-weight: 500;
-  border: 1px solid transparent;
-  transition: all 0.2s;
-}
-
-.mobile-nav-link:hover {
-  color: rgb(147 51 234);
-  background-color: rgb(250 245 255);
-  border-color: rgb(233 213 255);
-  transform: translateX(2px);
-}
-
-.mobile-nav-link.active {
-  color: rgb(147 51 234);
-  background-color: rgb(233 213 255);
-  border-color: rgb(196 181 253);
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-}
-
-/* 深色模式样式 */
-@media (prefers-color-scheme: dark) {
-  .nav-link {
-    color: rgb(209 213 219);
-  }
-
-  .nav-link:hover,
-  .mobile-nav-link:hover {
-    color: rgb(196 181 253);
-    background-color: rgb(88 28 135 / 0.5);
-    border-color: rgb(109 40 217);
-  }
-
-  .nav-link.active,
-  .mobile-nav-link.active {
-    color: rgb(196 181 253);
-    background-color: rgb(88 28 135 / 0.5);
-    border-color: rgb(139 92 246);
-  }
-
-  .mobile-nav-link {
-    color: rgb(209 213 219);
-  }
-}
-
-/* 页面过渡动画 */
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.page-enter-from {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(-20px);
-}
-
-/* 移动端菜单动画 */
-.md\:hidden > div {
-  transition: all 0.3s ease-in-out;
-}
-
-/* Logo 悬停效果 */
-nav .flex.items-center.space-x-4 > div:first-child:hover {
-  transform: scale(1.05) rotate(3deg);
-  transition: transform 0.2s ease-in-out;
-}
-
-/* 标题渐变文字动画 */
-h1[class*="bg-gradient-to-r"] {
-  background-size: 200% 100%;
-  animation: gradientShift 3s ease-in-out infinite;
-}
-
-@keyframes gradientShift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-/* 页脚链接悬停效果 */
-footer span {
-  transition: color 0.2s ease-in-out;
-}
-
-footer span:hover {
-  color: rgb(147 51 234);
-}
-</style>
